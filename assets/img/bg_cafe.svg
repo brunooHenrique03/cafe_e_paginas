@@ -1,0 +1,83 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Padrão repetível -->
+  <defs>
+    <!-- Livro aberto -->
+    <g id="book">
+      <!-- Página esquerda -->
+      <path d="M0 6 Q-1 4 -6 6 L-12 8 L-12 26 Q-9 29 -6 26 Q0 29 0 22 Z" 
+            fill="none" stroke="#DAA520" stroke-width="1.5"/>
+      <!-- Página direita -->
+      <path d="M0 6 Q1 4 6 6 L12 8 L12 26 Q9 29 6 26 Q0 29 0 22 Z" 
+            fill="none" stroke="#DAA520" stroke-width="1.5"/>
+      <!-- Lombada/centro -->
+      <line x1="0" y1="6" x2="0" y2="22" stroke="#DAA520" stroke-width="1.5"/>
+      <!-- Linhas de texto página esquerda -->
+      <line x1="-9" y1="12" x2="-3" y2="11" stroke="#DAA520" stroke-width="0.5"/>
+      <line x1="-9" y1="15" x2="-3" y2="14" stroke="#DAA520" stroke-width="0.5"/>
+      <line x1="-9" y1="18" x2="-3" y2="17" stroke="#DAA520" stroke-width="0.5"/>
+      <!-- Linhas de texto página direita -->
+      <line x1="3" y1="11" x2="9" y2="12" stroke="#DAA520" stroke-width="0.5"/>
+      <line x1="3" y1="14" x2="9" y2="15" stroke="#DAA520" stroke-width="0.5"/>
+      <line x1="3" y1="17" x2="9" y2="18" stroke="#DAA520" stroke-width="0.5"/>
+    </g>
+    
+    <!-- Xícara de café -->
+    <g id="coffee">
+      <!-- Xícara -->
+      <ellipse cx="0" cy="20" rx="8" ry="6" fill="none" stroke="#8B4513" stroke-width="1.5"/>
+      <path d="M-8 14 Q-8 8 0 8 Q8 8 8 14" fill="none" stroke="#8B4513" stroke-width="1.5"/>
+      <!-- Alça -->
+      <path d="M8 18 Q13 16 14 20 Q14 24 13 26 Q8 24 8 24" fill="none" stroke="#8B4513" stroke-width="1.5"/>
+      <!-- Vapor/fumacinha -->
+      <path d="M-3 5 Q-2 2 -3 0" fill="none" stroke="#8B4513" stroke-width="1" opacity="0.6"/>
+      <path d="M0 6 Q1 3 0 1" fill="none" stroke="#8B4513" stroke-width="1" opacity="0.6"/>
+      <path d="M3 5 Q4 2 3 0" fill="none" stroke="#8B4513" stroke-width="1" opacity="0.6"/>
+    </g>
+  </defs>
+  
+  <!-- Background transparente -->
+  <rect width="800" height="600" fill="transparent"/>
+  
+  <!-- Distribuição aleatória dos elementos -->
+  <!-- Primeira fileira -->
+  <use href="#book" transform="translate(80,60) rotate(15)"/>
+  <use href="#coffee" transform="translate(180,80) rotate(-10)"/>
+  <use href="#book" transform="translate(320,45) rotate(-25)"/>
+  <use href="#coffee" transform="translate(450,70) rotate(20)"/>
+  <use href="#book" transform="translate(600,55) rotate(35)"/>
+  <use href="#coffee" transform="translate(720,85) rotate(-15)"/>
+  
+  <!-- Segunda fileira -->
+  <use href="#coffee" transform="translate(50,180) rotate(45)"/>
+  <use href="#book" transform="translate(200,160) rotate(-40)"/>
+  <use href="#coffee" transform="translate(350,175) rotate(10)"/>
+  <use href="#book" transform="translate(500,155) rotate(25)"/>
+  <use href="#coffee" transform="translate(650,170) rotate(-30)"/>
+  
+  <!-- Terceira fileira -->
+  <use href="#book" transform="translate(120,280) rotate(20)"/>
+  <use href="#coffee" transform="translate(280,290) rotate(-25)"/>
+  <use href="#book" transform="translate(420,275) rotate(40)"/>
+  <use href="#coffee" transform="translate(580,285) rotate(5)"/>
+  <use href="#book" transform="translate(700,270) rotate(-20)"/>
+  
+  <!-- Quarta fileira -->
+  <use href="#coffee" transform="translate(90,400) rotate(-35)"/>
+  <use href="#book" transform="translate(250,380) rotate(30)"/>
+  <use href="#coffee" transform="translate(380,395) rotate(15)"/>
+  <use href="#book" transform="translate(520,385) rotate(-10)"/>
+  <use href="#coffee" transform="translate(680,390) rotate(25)"/>
+  
+  <!-- Quinta fileira -->
+  <use href="#book" transform="translate(160,500) rotate(-15)"/>
+  <use href="#coffee" transform="translate(320,520) rotate(35)"/>
+  <use href="#book" transform="translate(480,495) rotate(10)"/>
+  <use href="#coffee" transform="translate(620,515) rotate(-40)"/>
+  
+  <!-- Elementos extras para preencher espaços -->
+  <use href="#coffee" transform="translate(30,320) rotate(50)"/>
+  <use href="#book" transform="translate(750,200) rotate(-45)"/>
+  <use href="#coffee" transform="translate(150,550) rotate(20)"/>
+  <use href="#book" transform="translate(550,520) rotate(30)"/>
+  <use href="#coffee" transform="translate(750,450) rotate(-20)"/>
+</svg>
