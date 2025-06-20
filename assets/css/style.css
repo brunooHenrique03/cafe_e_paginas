@@ -31,6 +31,13 @@ ul{
 	list-style: none;
 }
 
+h2{
+  font-family: 'Playfair display', sans-serif;
+  color: var(--marrom-escuro);
+  font-size: 36px;
+  font-style: italic;
+}
+
 .btn {
   display: inline-block;
   padding: 12px 24px;
@@ -53,7 +60,7 @@ ul{
 /*========== ==========*/
 
 body{
-	background-color: #F5F5F5;
+	background-color: var(--bege-claro);
 }
 
 .container {
@@ -172,4 +179,175 @@ header.scrolled {
   font-family: 'Playfair display', sans-serif;
   font-style: italic;
 }
+
+/*SEÇÃO SOBRE*/
+main section{
+  margin: 60px 0;
+}
+
+main section .titulo{
+  margin-bottom: 30px;
+}
+
+section.sobre .area-sobre--conteudo{
+  display: flex;
+}
+
+section.sobre .conteudo-sobre{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 30px;
+}
+
+section.sobre .imagem-sobre{
+  min-height: 300px;
+  background-image: url( '../img/sobre.jpg' );
+  background-size: cover;
+  width: 50%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.icones-sobre{
+  display: flex;
+  justify-content: space-between;
+}
+
+.icones-sobre .icone-area{
+
+}
+
+.icone-area .descricao{
+  display: none;
+}
+
+.icones-sobre .icone{
+  border-radius: 40px;
+  background-color: var(--branco);
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.icones-sobre .icone:hover{
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+.icones-sobre img{
+  width: 80px;
+  height: 80px;
+}
+
+/*SEÇÃO CARDÁPIO*/
+section.cardapio .cardapio-container{
+  background-color: var(--branco);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  padding: 30px;
+}
+
+
+.menu-cardapio ul{
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 500px;
+}
+
+.menu-cardapio ul li{
+  color: var(--marrom-medio);
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  padding: 0 10px;
+}
+
+.menu-cardapio ul li:hover{
+  color: var(--marrom-escuro);
+}
+
+.menu-cardapio ul li::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--marrom-medio);
+  transition: var(--transition);
+}
+
+.menu-cardapio ul li.ativo::after {
+  width: 100%;
+}
+
+.itens-cardapio{
+  padding: 30px 0;
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: thin; 
+  scrollbar-color: #6F4E37 #F5F0E6; 
+
+}
+
+.itens-cardapio::-webkit-scrollbar {
+  height: 8px;
+}
+.itens-cardapio::-webkit-scrollbar-thumb {
+  background: #6F4E37;
+  border-radius: 4px;
+}
+
+.card-item-cardapio{
+  background-color: var(--bege-claro);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 350px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.card-item-cardapio:not( .card-item-cardapio:last-child ){
+  margin-right: 20px;
+}
+
+.card-item-cardapio img{
+  width: 100%;
+}
+
+.card-item-info{
+  padding: 15px;
+  text-align: center;
+}
+
+.card-item-info span{
+  display: block;
+}
+
+.card-item-info h3{
+  font-weight: 600;
+}
+
+.card-item-info span.descricao-item{
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+.card-item-info span.valor-item{
+  font-weight: 700;
+  font-size: 2em;
+  color: var(--marrom-escuro);
+  margin: 15px 0;
+}
+
+.card-item-info button{
+  width: 100%;
+}
+
 
