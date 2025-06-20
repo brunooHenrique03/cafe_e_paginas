@@ -3,10 +3,13 @@
 
 /*CONFIGURAÇÕES GERAIS*/
 :root{	
-	--preto-principal: #333333;
-	--marrom-principal: #6F4E37;	
-	--bege-principal: #F5F0E6;
-	--dourado-principal: #D4AF37;
+  --branco: #FFFFFF;
+  --bege-claro: #F5F0F6;
+  --dourado: #D4AF37;
+  --marrom-medio: #6F4E37;
+  --marrom-escuro: #3A2A1D;
+  --preto-padrao: #333333;
+
 	--transition: all 0.3s ease;
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --radius: 8px;
@@ -17,7 +20,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Open Sans', sans-serif;
-	color: var(--preto-principal);
+	color: var(--preto-padrao);
 }
 
 a{
@@ -31,7 +34,7 @@ ul{
 .btn {
   display: inline-block;
   padding: 12px 24px;
-  background-color: var(--marrom-principal);
+  background-color: var(--marrom-medio);
   color: white;
   border-radius: var(--radius);
   font-weight: 600;
@@ -42,20 +45,9 @@ ul{
 }
 
 .btn:hover {
-  background-color: var(--dourado-principal);
+  background-color: var(--dourado);
   transform: translateY(-2px);
   box-shadow: var(--shadow);
-}
-
-.btn-outline {
-  background-color: transparent;
-  border: 2px solid var(--marrom-principal);
-  color: var(--marrom-principal);
-}
-
-.btn-outline:hover {
-  background-color: var(--marrom-principal);
-  color: white;
 }
 
 /*========== ==========*/
@@ -119,7 +111,7 @@ header.scrolled {
 }
 
 .nav-link:hover {
-  color: var(--marrom-principal);
+  color: var(--marrom-medio);
 }
 
 .nav-link::after {
@@ -129,7 +121,7 @@ header.scrolled {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--marrom-principal);
+  background-color: var(--marrom-medio);
   transition: var(--transition);
 }
 
@@ -141,7 +133,7 @@ header.scrolled {
   display: none;
   cursor: pointer;
   font-size: 1.5rem;
-  color: var(--marrom-principal);
+  color: var(--marrom-medio);
 }
 
 
@@ -153,7 +145,7 @@ header.scrolled {
   background: linear-gradient(135deg, rgba(245, 240, 230, 0.1) 0%, rgba(245, 235, 215, 0.1) 100%);
   position: relative;
   overflow: hidden;
-  margin-top: 80px;
+  margin-top: 70px;
 }
 
 .hero::before {
@@ -175,20 +167,9 @@ header.scrolled {
 .hero-title {
   font-size: 3.5rem;
   margin-bottom: 20px;
-  color: var(--marrom-principal);
+  color: var(--marrom-medio);
   line-height: 1.2;
   font-family: 'Playfair display', sans-serif;
   font-style: italic;
-}
-
-.hero-text {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  color: var(--gray);
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 20px;
 }
 
