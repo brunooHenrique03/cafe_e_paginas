@@ -350,4 +350,81 @@ section.cardapio .cardapio-container{
   width: 100%;
 }
 
+/*SEÇÃO DE EVENTOS*/
+.eventos-container{
+  background-color: var(--branco);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);  
+  height: calc(100vh - 80px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.slider-controles{
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.slider-controle{
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  border:1px solid var(--marrom-medio);
+  cursor: pointer;
+}
+
+.slider-controle:not( .slider-controle:last-child ){
+  margin-right: 10px;
+}
+
+.slider-controle.ativo{
+  background-color: var(--marrom-medio);
+}
+
+.slider-area{
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+
+.slider-item{
+  height: 100%;
+  width: 100%;  
+  background-image: url( '../img/degustacao-cafe.jpg' );
+  background-size: cover;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.slider-item::after{
+  content: '';
+  width: 100%;
+  height: 100%;  
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0.8));  
+  display: block;
+}
+
+.evento-info{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.evento-info span{
+  display: block;
+}
+
+.evento-info .evento-info--nome{
+  color: var(--marrom-escuro);
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.evento-info .evento-info--data{
+  font-size: 0.9em;
+  margin-top: 5px;  
+}
+
 
