@@ -58,7 +58,7 @@
 
                         <div class="icones-sobre">
                             <div class="icone-area">
-                               <div class="icone">
+                               <div class="icone tooltip-sobre">
                                    <img src="./assets/img/icone-cafe.png">
                                </div> 
 
@@ -68,7 +68,7 @@
                             </div>
 
                             <div class="icone-area">
-                               <div class="icone">
+                               <div class="icone tooltip-sobre">
                                    <img src="./assets/img/icone-livros.png">
                                </div> 
 
@@ -78,7 +78,7 @@
                             </div>
 
                             <div class="icone-area">
-                               <div class="icone">
+                               <div class="icone tooltip-sobre">
                                    <img src="./assets/img/icone-wifi.png">
                                </div> 
 
@@ -103,9 +103,9 @@
                     
                     <div class="menu-cardapio">
                         <ul>
-                            <li class="ativo">Cafés</li>
-                            <li>Sobremesas</li>
-                            <li>Livros</li>
+                            <li class="ativo" data-categoria="cafe">Cafés</li>
+                            <li data-categoria="sobremesa">Sobremesas</li>
+                            <li data-categoria="livro">Livros</li>
                         </ul>
                     </div>
 
@@ -209,9 +209,9 @@
                     </div>                                       
 
                     <div class="slider-controles">
-                        <div class="slider-controle ativo"></div>
-                        <div class="slider-controle"></div>
-                        <div class="slider-controle"></div>
+                        <div class="slider-controle ativo" data-index="1"></div>
+                        <div class="slider-controle" data-index="2" ></div>
+                        <div class="slider-controle" data-index="3"></div>
                     </div>
                 </div>                
                 
@@ -327,7 +327,7 @@
 
     </footer>
 
-
+    <script type="text/javascript" src="./assets/js/cardapio.js"></script>
 	<script type="text/javascript" src="./assets/js/script.js"></script>
 </body>
 </html>

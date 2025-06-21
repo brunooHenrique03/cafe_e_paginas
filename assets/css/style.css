@@ -215,12 +215,30 @@ section.sobre .imagem-sobre{
   justify-content: space-between;
 }
 
-.icones-sobre .icone-area{
-
+.icone-area .descricao{
+  position: absolute;
+  display: none;
+  margin-top: 15px;
+  padding: 20px;
+  background-color: var(--branco);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: var(--marrom-medio);
 }
 
-.icone-area .descricao{
-  display: none;
+.icone-area .descricao.visivel{
+  display: block;
+}
+
+.icones-sobre .descricao::before{
+  content: '';
+  display: block;
+  border:20px solid;
+  border-color: transparent transparent var(--branco) transparent;
+  position: absolute;
+  top: -30px;
+  left: 20px;
+
 }
 
 .icones-sobre .icone{
@@ -387,6 +405,7 @@ section.cardapio .cardapio-container{
   flex: 1;
   display: flex;
   position: relative;
+  transition: var(--transition);
 }
 
 .slider-item{
