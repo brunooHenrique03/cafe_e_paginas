@@ -428,3 +428,95 @@ section.cardapio .cardapio-container{
 }
 
 
+/*SEÇÃO DE CONTATO*/
+section.contato .contato-container{
+  background-color: var(--branco);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  overflow-x: hidden;
+}
+
+.contato-info{
+  padding: 30px;
+  flex: 1;
+}
+
+.contato-info ul li{
+  display: flex;
+}
+
+.contato-info ul li .contato-icone{
+  margin-right: 10px;
+}
+
+.contato-info ul li img{
+  width: 24px;
+  height: 24px;
+}
+
+.contato-item{
+  margin-bottom: 20px;
+}
+
+.contato-item--titulo{
+  font-weight: 700;
+  color: var(--marrom-escuro);
+}
+
+.contato-item--valor{
+  font-weight: 300;
+}
+
+span.endereco{
+  color: var(--marrom-medio);
+}
+
+.contato-mapa{
+  width: 50%;
+}
+
+/*RODAPÉ*/
+footer{
+  background-color: var(--marrom-escuro);
+  padding: 30px;
+  text-align: center;
+}
+
+footer .redes-sociais h4{
+  color: var(--bege-claro);
+  font-weight: 500;
+}
+
+footer .redes-sociais ul{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+footer .redes-sociais ul li:not( footer .redes-sociais ul li:last-child ){
+  margin-right: 20px;
+}
+
+footer .redes-sociais ul li img{
+  width: 32px;
+  height: 32px;
+}
+
+footer hr{
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+  border-radius: 2px;
+  border:none;
+  height: 2px;
+  background-color: var(--bege-claro);
+}
+
+footer .copyright{
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+  font-size: 0.9em;
+  margin-top: 20px;
+}
