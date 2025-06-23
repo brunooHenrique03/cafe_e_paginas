@@ -69,13 +69,73 @@ document.querySelectorAll('.menu-cardapio ul li').forEach((element)=>{
 
 //SLIDER DA ÁREA DE EVENTOS
 function trocarSlider(e){
+  clearInterval( inTrocarSlider );
+
   const index = e.target.dataset.index;
-  console.log(index)
 
   const larguraSlider = document.querySelector('.slider-item').scrollWidth;
   document.querySelector( '.slider-area' ).style.left = '-' + ((index - 1) * larguraSlider) + 'px';
+
+  document.querySelectorAll('.slider-controle').forEach((element)=>{
+    if (element.classList.contains('ativo')){
+      element.classList.remove('ativo')
+    }
+  });
+
+  e.target.classList.add('ativo');
+
+  trocarSliderAutomatico();
 }
 
 document.querySelectorAll('.slider-controle').forEach((element)=>{
   element.addEventListener('click', trocarSlider)
+});
+
+function trocarSliderAutomatico(){
+  inTrocarSlider = setInterval( ()=>{
+    const controleSliderAtivo = document.querySelector( '.slider-controle.ativo' );
+    let index = 0;
+
+    if (controleSliderAtivo) {
+      index = controleSliderAtivo.dataset.index;
+    }
+
+    if (index == 3) index = 0;
+
+    index++;
+
+    const larguraSlider = document.querySelector('.slider-item').scrollWidth;
+    document.querySelector( '.slider-area' ).style.left = '-' + ((index - 1) * larguraSlider) + 'px';
+
+    document.querySelectorAll('.slider-controle').forEach((element)=>{
+      if (element.classList.contains('ativo')){
+        element.classList.remove('ativo')
+      }
+    });
+
+    //pega o novo elemento
+    const novoControle = document.querySelector( '.slider-controle[data-index="'+ index +'"]' );
+    novoControle.classList.add('ativo');
+  }, 7000 );
+}
+
+var inTrocarSlider = null;
+window.addEventListener('load', trocarSliderAutomatico);
+
+
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+// Abrir/Fechar menu
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+});
+
+// Fechar menu ao clicar em um link
+document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+    });
 });

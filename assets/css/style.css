@@ -90,7 +90,7 @@ header.scrolled {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+  padding: 15px 15px;
 }
 
 .logo {
@@ -137,11 +137,19 @@ header.scrolled {
 }
 
 .hamburger {
-  display: none;
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: var(--marrom-medio);
+    display: none;
+    cursor: pointer;
 }
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: #333;
+    transition: all 0.3s;
+}
+
 
 
 /* Hero Section */
@@ -205,6 +213,7 @@ section.sobre .imagem-sobre{
   min-height: 300px;
   background-image: url( '../img/sobre.jpg' );
   background-size: cover;
+  background-position: center;
   width: 50%;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -410,11 +419,11 @@ section.cardapio .cardapio-container{
 
 .slider-item{
   height: 100%;
-  width: 100%;  
-  background-image: url( '../img/degustacao-cafe.jpg' );
-  background-size: cover;
+  width: 100%;    
   flex-shrink: 0;
   position: relative;
+  background-size: cover;
+  background-position: center;
 }
 
 .slider-item::after{
@@ -423,6 +432,18 @@ section.cardapio .cardapio-container{
   height: 100%;  
   background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0.8));  
   display: block;
+}
+
+.slider-item.degustacao-de-cafe{
+  background-image: url( '../img/degustacao-cafe.jpg' );  
+}
+
+.slider-item.clube-do-livro{
+  background-image: url( '../img/clube-do-livro.jpg' );  
+}
+
+.slider-item.festival-de-inverno{
+  background-image: url( '../img/festival-inverno.jpg' );  
 }
 
 .evento-info{
@@ -538,4 +559,95 @@ footer .copyright{
   font-style: italic;
   font-size: 0.9em;
   margin-top: 20px;
+}
+
+/*BREAKPOINTS*/
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 70px; 
+        left: 100%;
+        width: 100%;
+        flex-direction: column;
+        background: #fff;
+        text-align: center;
+        transition: 0.3s;
+        gap: 0;
+        padding: 1rem 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+        text-align: left;
+        padding-left: 1rem;
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .area-sobre--conteudo{
+      flex-direction: column;
+    }
+
+    .conteudo-sobre p{
+      text-align: center;
+    }
+
+    .icone-area .descricao{
+      position: static;
+      display: block;
+    }
+
+    .icone-area .descricao::before{
+      content:'';
+    }
+
+    .icones-sobre{
+      margin: 20px 0;
+      flex-direction: column;
+    }
+
+    .icone-area:not(.icone-area:last-child){
+      margin-bottom: 20px;
+    }
+
+    section.sobre .imagem-sobre{
+      width: 100%;
+      height: 400px;
+    }
+
+    .contato-container{
+      flex-direction: column;
+    }
+
+    .contato-info{
+      order: 2;
+    }
+    .contato-mapa{
+      order: 1;
+      width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title{
+      font-size: 3rem;
+    }
 }
