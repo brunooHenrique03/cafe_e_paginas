@@ -606,6 +606,10 @@ footer .copyright{
       flex-direction: column;
     }
 
+    section.sobre .conteudo-sobre{
+      padding-right: 0;
+    }
+
     .conteudo-sobre p{
       text-align: center;
     }
@@ -613,6 +617,7 @@ footer .copyright{
     .icone-area .descricao{
       position: static;
       display: block;
+      width: 100%;
     }
 
     .icone-area .descricao::before{
@@ -631,6 +636,7 @@ footer .copyright{
     section.sobre .imagem-sobre{
       width: 100%;
       height: 400px;
+      background-image: url('../img/sobre-mobile.jpg');
     }
 
     .contato-container{
@@ -646,8 +652,20 @@ footer .copyright{
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
     .hero-title{
       font-size: 3rem;
+    }
+
+    .slider-item.degustacao-de-cafe{
+      background-image: url( '../img/degustacao-cafe-mobile.jpg' );  
+    }
+
+    .slider-item.clube-do-livro{
+      background-image: url( '../img/clube-do-livro-mobile.jpg' );  
+    }
+
+    .slider-item.festival-de-inverno{
+      background-image: url( '../img/festival_inverno_mobile.jpg' );  
     }
 }
